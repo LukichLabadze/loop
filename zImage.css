@@ -1,0 +1,243 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  width: 100vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-bottom: 20rem;
+}
+
+.z-img{
+  width: calc(100vw - 20vw);
+  height: 80vh;
+  position: relative;
+  padding-left: 10rem;
+  margin-top: 10rem;
+}
+
+.inter{
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(./images/desktop/image-interactive.jpg);
+  background-size: cover;
+}
+
+.inter-text{
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: white;
+}
+
+.inter-text h1{
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: "Josefin Sans", system-ui;
+  font-weight: 400;
+  color: gray;
+}
+
+.inter-text p {
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", system-ui;
+  font-weight: 300;
+  color: gray;
+}
+
+.grid-items{
+  width: calc(100vw - 20vw);
+  height: 120vh;
+  position: relative;
+  
+  margin-top: 10rem;
+}
+
+.top{
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+
+.creations{
+  height: 100%;
+  flex: 1;
+  font-family: "Josefin Sans", system-ui;
+  font-weight: 200;
+  color: gray;
+}
+
+.see-all{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.see-btn:hover{
+  cursor: pointer;
+}
+
+.bottom{
+  width: 100%;
+  height: 20%;
+  display: none;
+}
+
+.see-all-2{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.see-btn{
+  width: 10rem;
+  height: 5rem;
+  border: 3px solid black;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: "Josefin Sans", system-ui;
+  font-weight: 200;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 40px; /* space between items */
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  position: relative;
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  height: 600px; /* Set a fixed height for each grid item */
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(0.95); /* Shrinks the item to 95% of its original size */
+  cursor: pointer;
+}
+
+.item-1 {
+  background-image: url(./images/desktop/image-deep-earth.jpg); /* Background image for item 1 */
+}
+.item-2 {
+  background-image: url(./images/desktop/image-night-arcade.jpg); /* Background image for item 1 */
+}
+.item-3 {
+  background-image: url(./images/desktop/image-soccer-team.jpg); /* Background image for item 1 */
+}
+.item-4 {
+  background-image: url(./images/desktop/image-grid.jpg); /* Background image for item 1 */
+}
+.item-5 {
+  background-image: url(./images/desktop/image-from-above.jpg); /* Background image for item 1 */
+}
+.item-6 {
+  background-image: url(./images/desktop/image-pocket-borealis.jpg); /* Background image for item 1 */
+}
+.item-7 {
+  background-image: url(./images/desktop/image-curiosity.jpg); /* Background image for item 1 */
+}
+.item-8 {
+  background-image: url(./images/desktop/image-fisheye.jpg); /* Background image for item 1 */
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0; /* Position the text at the bottom */
+  left: 0; /* Position the text to the left */
+  color: white; /* Text color */
+  font-size: 3rem; /* Adjust font size as needed */
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  z-index: 1; /* Ensure the text is above the background */
+  font-family: "Josefin Sans", system-ui;
+  font-weight: 200;
+}
+
+@media (max-width: 600px){
+  main{
+    width: 100%;
+    height: 120vh;
+  }
+
+  .z-img{
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    
+  }
+
+  .inter{
+    background: url(./images/mobile/image-interactive.jpg) center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+
+  .inter-text{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .see-all{
+    display: none;
+  }
+  .bottom{
+    margin-top: 2rem;
+    display: flex;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column */
+    grid-template-rows: repeat(8, auto); /* 8 rows */
+  }
+
+  .grid-item {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
